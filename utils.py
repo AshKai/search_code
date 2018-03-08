@@ -760,7 +760,7 @@ class FIFOQueue(Queue):
             self.start = 0
         return e
 
-class Ram_Acot(Queue):
+class RamAcot(Queue):
 
     def __init__(self):
         self.A = []
@@ -771,6 +771,23 @@ class Ram_Acot(Queue):
     def extend(self, items):
         self.A.extend(items)
         self.A.sort(key=lambda x: x.path_cost)
+
+    def pop(self):
+        return self.A.pop(0)
+
+class RamAcotSub(Queue):
+
+    def __init__(self, problem):
+        self.A = []
+        self.start = 0
+        self.problem = problem
+
+    def append(self, item):
+        self.A.append(item)
+
+    def extend(self, items):
+        self.A.extend(items)
+        self.A.sort(key=lambda items: items.path_cost + self.problem.h(items))
 
     def pop(self):
         return self.A.pop(0)

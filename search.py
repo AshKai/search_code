@@ -143,8 +143,10 @@ def depth_first_graph_search(problem):
 
 
 def ram_acot_graph_search(problem):
-    return graph_search(problem, Ram_Acot())
+    return graph_search(problem, RamAcot())
 
+def ram_acot_sub_graph_search(problem):
+    return graph_search(problem, RamAcotSub(problem))
 
 def depth_limited_search(problem, limit=50):
     """[Fig. 3.12]"""

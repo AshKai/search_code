@@ -8,7 +8,7 @@ ab = search.GPSProblem('A', 'B', search.romania)
 print search.breadth_first_graph_search(ab).path()
 print search.depth_first_graph_search(ab).path()
 
-print search.ramification(ab).path()
+print search.ram_acot_graph_search(ab).path()
 
 #print search.iterative_deepening_search(ab).path()
 #print search.depth_limited_search(ab).path()

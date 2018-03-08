@@ -142,8 +142,8 @@ def depth_first_graph_search(problem):
     return graph_search(problem, Stack())
 
 
-def ramification(problem):
-    return graph_search(problem, MyQueue())
+def ram_acot_graph_search(problem):
+    return graph_search(problem, Ram_Acot())
 
 
 def depth_limited_search(problem, limit=50):

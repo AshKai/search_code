@@ -3,13 +3,26 @@
 import search
 
 ab = search.GPSProblem('A', 'B', search.romania)
+an = search.GPSProblem('A', 'N', search.romania)
+no = search.GPSProblem('N', 'O', search.romania)
 
-
+print "A-B"
 print search.breadth_first_graph_search(ab).path()
 print search.depth_first_graph_search(ab).path()
-
 print search.ram_acot_graph_search(ab).path()
 print search.ram_acot_sub_graph_search(ab).path()
+
+print "\nA-N"
+print search.breadth_first_graph_search(an).path()
+print search.depth_first_graph_search(an).path()
+print search.ram_acot_graph_search(an).path()
+print search.ram_acot_sub_graph_search(an).path()
+
+print "\nN-O"
+print search.breadth_first_graph_search(no).path()
+print search.depth_first_graph_search(no).path()
+print search.ram_acot_graph_search(no).path()
+print search.ram_acot_sub_graph_search(no).path()
 
 #print search.iterative_deepening_search(ab).path()
 #print search.depth_limited_search(ab).path()

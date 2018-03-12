@@ -770,7 +770,7 @@ class RamAcot(Queue):
 
     def extend(self, items):
         self.A.extend(items)
-        self.A.sort(key=lambda x: x.path_cost)
+        self.A.sort(key=lambda items: items.path_cost)
 
     def pop(self):
         return self.A.pop(0)

@@ -126,7 +126,7 @@ def graph_search(problem, fringe):
     while fringe:
         node = fringe.pop()
         if problem.goal_test(node.state):
-            print "Nodos visitados: ", count
+            print "\nSe han visitado", count, "nodos."
             return node
         if node.state not in closed:
             closed[node.state] = True
